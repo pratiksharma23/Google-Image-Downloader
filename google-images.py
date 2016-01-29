@@ -70,7 +70,7 @@ def download_images(links, search_keyword):
     num = raw_input("Enter number of images to download (max 100): ")
     counter = 1
     search_keyword = search_keyword.replace("%20","_")
-    directory = '/home/pratik/Pictures/'+search_keyword+'/'
+    directory = 'Enter the directory'
     if not os.path.isdir(directory):
         os.makedirs(directory)
     for link in links:
