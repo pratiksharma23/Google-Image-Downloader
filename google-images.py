@@ -70,13 +70,13 @@ def download_images(links, search_keyword):
     num = raw_input("Enter number of images to download (max 100): ")
     counter = 1
     search_keyword = search_keyword.replace("%20","_")
-    directory = 'home/pratik/Pictures/'+search_keyword+'/'
+    directory = search_keyword+'/'
     if not os.path.isdir(directory):
         os.makedirs(directory)
     for link in links:
         if counter<=int(num):
             file_extension = link.split(".")[-1]
-            filename = directory +search_keyword+ str(counter) + "."+ file_extension
+            filename = directory + str(counter) + "."+ file_extension
             print str(counter)+'/'+str(num)
             urllib.urlretrieve(link, filename)
         counter+=1
